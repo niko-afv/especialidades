@@ -11,6 +11,8 @@ class CategoriasEspecialidadesController extends \BaseController {
 	{
             $especialidades = Categoria::find($id_categoria)/*->especialidades()*->get()->toArray()*/;
             print_r($especialidades);
+            print_r(DB::last_query());
+            die;
             $oRespuesta = new Respuesta(false,$especialidades);
                 
             return Response::json(
