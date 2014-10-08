@@ -52,7 +52,7 @@ class CategoriasController extends \BaseController {
 	 */
 	public function show($id)
 	{
-            $categoria = Categoria::find($id)->get()->toArray();
+            $categoria = Categoria::where('ID','=',$id)->get()->toArray();
             print_r($categoria);
             print_r($id);
             die;

@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
-});
+});*/
 
 Route::resource('categorias', 'CategoriasController');
 Route::resource('categorias/{id_categoria}/especialidades', 'CategoriasEspecialidadesController');
