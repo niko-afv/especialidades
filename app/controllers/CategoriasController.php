@@ -52,7 +52,15 @@ class CategoriasController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+            $categoria = Categoria::find($id)->get()->toArray();
+            $oRespuesta = new Respuesta( false, $categoria);
+
+            return Response::json(
+                $oRespuesta->toArray(),
+                200,
+                [ ],
+                JSON_PRETTY_PRINT
+            );
 	}
 
 
