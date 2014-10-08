@@ -9,7 +9,7 @@ class CategoriasController extends \BaseController {
 	 */
 	public function index()
 	{
-            $categorias = Categoria::all()->toJson();
+            $categorias = Categoria::all()->toArray();
             
             $oRespuesta = new Respuesta(false, $categorias);
             
