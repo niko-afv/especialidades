@@ -14,6 +14,7 @@
 class Categoria extends Eloquent{
     protected $table = 'CATEGORIAS';
     protected $primaryKey = "ID";
+    public $timestamps = FALSE;
     
     public function especialidades()
     {
