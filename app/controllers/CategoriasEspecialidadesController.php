@@ -9,9 +9,8 @@ class CategoriasEspecialidadesController extends \BaseController {
 	 */
 	public function index($id_categoria)
 	{
-            $especialidades = Categoria::find($id_categoria)/*->especialidades()*->get()->toArray()*/;
+            $especialidades = Categoria::find($id_categoria)/*->especialidades()*/->get()/*->toArray()*/;
             print_r($especialidades);
-            print_r(DB::last_query());
             die;
             $oRespuesta = new Respuesta(false,$especialidades);
                 
