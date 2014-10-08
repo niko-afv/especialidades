@@ -13,6 +13,7 @@
  */
 class Categoria extends Eloquent{
     protected $table = 'CATEGORIAS';
+    protected $primaryKey = "ID";
     
     public function especialidades()
     {
