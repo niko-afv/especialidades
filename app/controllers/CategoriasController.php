@@ -9,7 +9,8 @@ class CategoriasController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+            $categorias = Categoria::all();
+            /*print_r($categorias);*/
 	}
 
 
