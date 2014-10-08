@@ -11,11 +11,11 @@
  *
  * @author nfredes
  */
-class Categoria extends Eloquent{
-    protected $table = 'CATEGORIAS';
+class Especialidad extends Eloquent{
+    protected $table = 'ESPECIALIDADES';
     
-    public function especialidades()
+    public function categoria()
     {
-        return $this->hasMany("Especialidad", "CATEGORIA");
-    }   
+        return $this->belongsTo("Categoria");
+    }
 }
