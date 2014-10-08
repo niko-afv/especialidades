@@ -9,8 +9,16 @@ class CategoriasController extends \BaseController {
 	 */
 	public function index()
 	{
-            $categorias = Categoria::all();
-            print_r($categorias);
+            $categorias = Categoria::all()->toJson();
+            
+            $oRespuesta = new Respuesta(false, $categorias);
+            
+            return Response::json(
+                $oRespuesta->toArray(),
+                200,
+                [ ],
+                JSON_PRETTY_PRINT
+            );
 	}
 
 
