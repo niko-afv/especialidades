@@ -12,6 +12,6 @@
  * @author nfredes
  */
 class Categoria extends Eloquent{
-    protected $table = 'categorias';
+    protected $table = 'CATEGORIAS';
     
 }
